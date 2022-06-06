@@ -1,5 +1,8 @@
+import { ROBOT_ACTION_PART } from "./enums/robotActionPart";
+
 export type ActionStateType = {
   title: string,
+  robotActionPart: ROBOT_ACTION_PART,
   states: string[],
   stateIndex: number,
   disabled: boolean,
