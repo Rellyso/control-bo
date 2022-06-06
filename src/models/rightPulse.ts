@@ -1,8 +1,10 @@
 import { ActionStateType } from "./actionState";
+import { ROBOT_ACTION_PART } from "./enums/robotActionPart";
 
 export function getNewRightPulse(): ActionStateType {
   return {
     title: "Pulso Direito",
+    robotActionPart: ROBOT_ACTION_PART.RIGHT_PULSE,
     states: [
       'Rotação para -90°',
       'Rotação para -45°',
@@ -15,4 +17,13 @@ export function getNewRightPulse(): ActionStateType {
     stateIndex: 2,
     disabled: false,
   }
+}
+
+export function getRightPulse(): ActionStateType {
+  const action = localStorage.getItem(ROBOT_ACTION_PART.RIGHT_PULSE)
+
+  if (action)
+    return JSON.parse(action) as ActionStateType
+
+  return getNewRightPulse()
 }
