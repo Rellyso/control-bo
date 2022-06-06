@@ -3,7 +3,11 @@ module.exports = {
     "./index.html",
     "./src/**/*.tsx",
   ],
+  darkMode: 'class',
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         brand: {
