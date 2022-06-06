@@ -2,7 +2,7 @@ import { Robot } from "phosphor-react";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-center h-20 p-2 text-slate-50 border-b border-slate-300/10">
+    <header id="header" className="bg-slate-900 flex items-center justify-center h-20 p-2 text-slate-50 border-b border-slate-300/10">
       <div className="text-5xl font-semibold select-none ">
         control
         <span className="text-brand-secondary">.bo</span>
